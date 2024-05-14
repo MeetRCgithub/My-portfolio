@@ -1,57 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <main class="main_background">
-        <section class="main_container">
-            <nav class="navbar">
+
+<body class="main_background">
+    <main class="main_container">
+
+        <nav class="navbar">
+            <a class="mnu_a" href="menu.html">
                 <span class="material-symbols-outlined menu">
                     menu
                 </span>
-            </nav>
-            <section class="main_content">
-                <aside class="left">
-                    <div class="left_data">
-                        <p class="msg">
-                            Hello 'I am,
-                        </p>
-                        <h1 class="name">
-                            Meet Patel
-                        </h1>
-                      
-                    </div>
-                    
-                       
-                        <h2 class="profession">
-                            <span id="element"></span>
-                            
-                        </h2>
-                    
-                    
-                
-                </aside>
-                <aside class="right">
-                    <div class="profilepic">
-                        <img  src="imgs/IMG_20220305_114819.jpg" alt=" Myprofilepic">
+            </a>
 
+        </nav>
+        <section class="main_content">
+            <aside class="left">
+                <div class="left_data">
+
+                    <p class="msg">
+                        Hello 'I am,
+                    </p>
+                    <h1 class="name">
+                        Meet Patel
+                    </h1>
+                    <h2 class="profession">
+                        <span id="element"></span>
+
+                    </h2>
+                    <div class="buttons">
+                        <a href="" class="more-about-btn">More About Me</a>
+                        <a href="" class="portfolio-btn">Portfolio</a>
                     </div>
-                </aside>
-            </section>
+
+                </div>
+
+
+
+
+
+
+            </aside>
+            <aside class="right">
+                <div class="profilepic">
+                    <img src="imgs/IMG_20220305_114819.jpg" alt=" Myprofilepic">
+
+                </div>
+            </aside>
         </section>
+
     </main>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed('#element', {
-          strings: ['Full stack Developer.', 'backend developer'],
-          typeSpeed: 50,
+            strings: ['Full Stack Developer', 'Backend Developer', 'Public Speaker', 'Web Designer'],
+            typeSpeed: 100,
         });
-      </script>
+    </script>
     <script src="script.js"></script>
+
 </body>
+
 </html>
