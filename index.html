@@ -5,16 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <!-- -------------style part starts------------------------ -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="style.css">
+
+
+
+
+    <!-- -------------style part ends---------------- -->
 </head>
 
-<body class="main_background">
-    <main class="main_container">
+<!-- ---------------home sectvtion starts------------------------ -->
+<body class="main_background" >
+    <main class="main_container" id = "home">
 
         <nav class="navbar">
-            <a class="mnu_a" href="menu.html">
+            <a class="mnu_a" href="pages/menu.html">
                 <span class="material-symbols-outlined menu">
                     menu
                 </span>
@@ -50,22 +57,90 @@
             </aside>
             <aside class="right">
                 <div class="profilepic">
-                    <img src="imgs/IMG_20220305_114819.jpg" alt=" Myprofilepic">
+                    <img class="home_img" src="imgs/IMG_20220305_114819.jpg" alt=" Myprofilepic">
 
                 </div>
             </aside>
         </section>
 
     </main>
+    <!-- ---------------home section end----------- -->
+
+
+    <!-- ----------------about section start---------------- -->
+
+    <main class="main_container" id = "about">
+
+        <!-- <nav class="navbar">
+            <a class="mnu_a" href="menu.html">
+                <span class="material-symbols-outlined menu">
+                    menu
+                </span>
+            </a>
+        </nav> -->
+        <section class="main_content_about">
+            
+        </section>
+
+    </main>
+
+    <!-- ------------------------about section ends---------------------- -->
+
+    <!-- ----------------portfolio section start---------------- -->
+
+    <main class="main_container" id = "portfolio">
+
+        <!-- <nav class="navbar">
+            <a class="mnu_a" href="menu.html">
+                <span class="material-symbols-outlined menu">
+                    menu
+                </span>
+            </a>
+        </nav> -->
+        <section class="main_content_portfolio">
+            
+        </section>
+
+    </main>
+
+
+    <!-- ----------------portfolio section ends---------------- -->
+
+
+    <!-- ----------------contact section start---------------- -->
+
+    <main class="main_container" id = "contact">
+
+        <!-- <nav class="navbar">
+            <a class="mnu_a" href="menu.html">
+                <span class="material-symbols-outlined menu">
+                    menu
+                </span>
+            </a>
+        </nav> -->
+        <section class="main_content_contact">
+            
+        </section>
+
+    </main>
+
+    <!-- ----------------contact section ends---------------- -->
+
+
+
+    <!-- ---------------script part starts------------------------ -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
-        var typed = new Typed('#element', {
+        // while (true) {
+            var typed = new Typed('#element', {
             strings: ['Full Stack Developer', 'Backend Developer', 'Public Speaker', 'Web Designer'],
             typeSpeed: 100,
-        });
+            });
+        // }
+       
     </script>
     <script src="script.js"></script>
-
+    <!-- ---------------------------------script part ends---------------- -->
 </body>
 
 </html>
