@@ -5,10 +5,16 @@
 :root{
     --white-alpha-40: rgba(255, 255, 255, 0.40);
     --white-alpha-10: rgba(255, 255, 255, 0.10);
-
     --white-alpha-25: rgba(255, 255, 255, 0.25);
 }
+body{
+    -ms-overflow-style: none;
+    scrollbar-width: 0px;
+}
 
+body::-webkit-scrollbar{
+    width:0px;
+}
 .navbar {
     display: flex;
     justify-content: right;
@@ -29,7 +35,9 @@
     transform:rotate(270deg);
 }
 
-
+.all{
+    transition: all 1s ease;
+}
 .main_background {
     height: 100%;
     min-width: 100%;
@@ -43,7 +51,14 @@
     /* gap : 20px; */
     /* background-color: #1612fc; */
 }
+.all.popupcome{
+    z-index: -1;
+    opacity:0.1;
+}
 
+body.stopscrolling{
+    overflow-y: hidden;
+}
 .main_container{
     margin: 5% 2.5%;
     height:90%;
@@ -51,11 +66,10 @@
     background-color: var(--white-alpha-25);
     border-radius: 20px;
 }
-
 .heading{
     display: flex;
     justify-content: center;
-    font-size: 30px;
+    font-size: 4vw;
     font-weight: 400;
     font-family: Verdana, Geneva, Tahoma, sans-serif;   
 } 
@@ -72,7 +86,7 @@
 .projectcard{
     padding:10px;
     width:calc(100% / 2 - 60px);
-    max-height:50%;
+    /* max-height:72vh; */
     min-width:250px;
     display: flex;
     align-items: center;
@@ -80,6 +94,9 @@
     flex-wrap: wrap;
 }
 .imgback{
+    border:2px solid rgba(255, 252, 252, 0.762);
+    border-radius: 20px;
+    padding:5px;
     height:100%;
     width:100%;
     display: flex;
@@ -98,7 +115,6 @@ justify-content: center;
 .smlldes{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 3vw;
-
     font-weight: 500;
     text-align: center;
     text-transform: capitalize;
@@ -148,11 +164,126 @@ justify-content: center;
 }
 
 .primg{
-    /* min-height: 250px; */
     height:100%;
-    object-fit: cover;
     width:100%;
-    /* min-width: 250px; */
     border-radius: 20px;
-    /* filter: blur(2px); */
+}
+
+/* ----------
+viewmore card starts
+----------- */
+
+/* --------removing scrollbar---- */
+.pro-det-innr::-webkit-scrollbar{
+    width:0px;
+}
+
+.project-details{
+    position:fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* display: none; */
+    visibility: hidden;
+}
+
+/* ----------btn active css------- */
+.disp-popup{
+    visibility: visible;
+}
+/* --------------btn deactive css---------- */
+
+.pro-det-innr{
+    /* margin-top: 60px; */
+    height:90%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width:70%;
+    background-color: var(--white-alpha-40);
+    border-radius: 20px;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transform: scale(0.9);
+}
+
+.project-details.disp-popup.pro-det-innr{
+    opacity: 1;
+    transform :scale(1);
+    /* transition: all 4s ease; */
+}
+.smldes-det{
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* height: 100%;
+    width: 100%; */
+}
+.smlldes-det {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 4vw;
+    font-weight: 500;
+    /* text-align: center; */
+    /* color:rgb(8, 0, 255); */
+    text-transform: capitalize;
+    /* height: 100%;
+    width: 70%; */
+}
+.pro-det-content{
+    height:100%;
+    width:100%;
+}
+.projet-det-img{
+    padding: 15px 5px;
+    margin-right:10px;
+    height:100%;
+    width: 99%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.details-portimg{
+    height:100%;
+    width:100%;
+    margin:5px;
+    border-radius: 20px;
+    padding:10px;
+}
+
+.det-proj-para{
+    width:100%;
+}
+.det-para{
+    padding:10px;
+    font-size:2vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:400;
+}
+.det-ul{
+    padding:10px;
+    font-size:2vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:400;
+    list-style: none;
+}
+.det-li{
+    padding:5px;
+    font-weight:700;
+}
+.data-created{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:2vw;
+    padding:5px;
+    font-weight:400;
+}
+.web-url{
+    text-decoration: none;
 }
