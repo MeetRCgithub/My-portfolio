@@ -73,7 +73,6 @@ body.stopscrolling{
     font-weight: 400;
     font-family: Verdana, Geneva, Tahoma, sans-serif;   
 } 
-
 .prcards{
     display: flex;
     align-items: center;
@@ -227,7 +226,7 @@ viewmore card starts
     /* height: 100%;
     width: 100%; */
 }
-.smlldes-det {
+.smlldes-det { 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 4vw;
     font-weight: 500;
@@ -287,3 +286,23 @@ viewmore card starts
 .web-url{
     text-decoration: none;
 }
+
+/* ---------responsive design starts--------- */
+@media screen and (max-width:575px) {
+    .projectcard,.pro-det-innr{
+        width:100%;
+    }
+    .smlldes{
+        font-size:20px;
+    }
+    .heading{
+        font-size:25px;
+    }
+    .det-li span,.det-li,.det-para{
+        font-size:17px;
+    }
+    .smlldes-det{
+        font-size: 27px ;
+    }
+} 
+/* ---------------responsive design ends-------- */

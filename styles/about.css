@@ -326,3 +326,18 @@
 }
 
 /* -----------------about page style finish-------------- */
+
+/* ---------responsive starts----------- */
+@media screen and (max-width:575px) {
+    .right_about{
+        width:100%;
+        padding:20px;
+    }
+    .left_about{
+        height:20%;
+        width:100%;
+        min-width:40%;
+        max-width:100%;
+    }
+}
+/* ----------responsive ends------------- */

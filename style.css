@@ -51,10 +51,6 @@
     -webkit-tap-highlight-color: transparent;
     gap : 20px;
 }
-
-.mnu_a {}
-
-
 .menu {
     cursor: pointer;
     transition: all 0.5s ease;
@@ -62,7 +58,6 @@
     border-radius: 50%;
 
 }
-
 .menu:hover {
     background-color: var(--white-alpha-40);
 }
@@ -70,38 +65,32 @@
     transform:rotate(270deg);
 }
 
-
 .main_container {
     margin : 50px 0px;
-    height: 90vh;
     width: 90vw;
+    min-height:90vh;
     border-radius: 20px;
     flex-wrap: wrap;
     background-color: var(--white-alpha-25);
 }
-
 .msg {
     color: rgb(92, 56, 221);
-    font-size: 2rem;
+    font-size: 18px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 .name {
     color: rgb(92, 56, 221);
-    margin: 10px 0px 20px 0px;
+    margin: 10px 0px 10px 20px;
     font-size: 2rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-
     font-weight: 400;
 }
-
-
 #element {
     color: rgba(36, 12, 255, 0.726);
     font-family: cursive;
     font-weight: medium;
     /* display: inline-block; */
-    /* font-size: 90%; */
+    font-size: 20px;
 }
 
 .navbar {
@@ -113,6 +102,7 @@
 .main_content {
     display: flex;
     align-items: center;
+    margin-top:10vh;
     justify-content: space-between;
     height: calc(80vh - 2%);
     width: 100%;
@@ -122,25 +112,22 @@
 .left {
     width: 50%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .left_data {
     width: 100%;
     height: 100%;
-    margin-top: 25px;
+    margin: 25px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    flex-direction: column;
+    align-items:start;
     transition: all 1s ease;
 }
 
 
 .right {
-    min-width: 50%;
+    width: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -156,33 +143,30 @@
 }
 
 .home_img {
-    min-width: 50%;
-    height: 60%;
+    width: 50%;
     border: 2px solid #fff;
-    border-radius: 50%;
+    border-radius: 20px;  
     opacity: 1;
     vertical-align: center;
-
     /* transition:all 1s ease; */
 }
 
-.home_img:hover {
-
+.home_img:hover{
     animation: picanimation 1s ease;
 }
 
 @keyframes picanimation {
     0% {
-        transform: translateX(0px);
+        transform: translateX(100px) scale(0.9);
+        opacity: 0;
         /* transform: rotate(0deg); */
     }
 
     100% {
-        transform: translateX(-50px);
+        transform: translateX(-100px) scale(1.0);
+        opacity:1;
         /* transform:  rotate(180deg); */
         /* height:50%; */
-
-
     }
 }
 
@@ -223,7 +207,6 @@
     color: white;
     font-size: 20px;
     /* transition : 0s 5s all ease ; */
-
     /*  transition-delay ,duration,property, timing-func,behaviour*/
 }
 
@@ -238,7 +221,6 @@
         /* background-color:#aef1ee; */
         /* left:0%; */
         transform: translateY(0%);
-
     }
 
     50% {
@@ -259,7 +241,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    height: calc(80vh - 2%);
+    min-height: calc(80vh);
     width: 100%;
     flex-direction: column;
     flex-wrap: wrap;
@@ -286,133 +268,35 @@
 
 /* -------------menu page style finish----------- */
 
-/* -------------about page style starts---------- */
-
-.main_content_about {
-    display: flex;
-    background-color: var(--white-alpha-25);
-    align-items: center;
-    justify-content: center;
-    height: calc( 90vh - 2% );
-    width: 90%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    border-radius: 10px;
-}
-
-.heading{
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-    font-weight: 400;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;   
-    /* align-content: center; */
-}
-
-.about_data{
-    margin-top:35px;
-    display: flex;
-    height: 100%;
-    width:100%;
-    flex-wrap: wrap;
+/* -----------Responsive style -------------- */
+@media only screen and (max-width:575px){
+    .left,.right{
+            width:100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    }
+    .left_data{
+        margin:30px 0px;
+        /* text-align: center; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .namw{
+        margin:0;
+    }
     
+    .main_content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .right,.home_img{
+        order:-1;
+    }
+    .home_img:hover{
+        animation: none;
+    }
 }
-.left_about{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    object-fit: center;
-   width:30%;
-   /* height:50%; */
-   flex-wrap: wrap;
-   flex-shrink: 1;
-    height:100%;
-}
-
-.right_about{
-    display: flex;
-    flex-direction: column;
-   width:50%;
-    height: 100%;
-    flex-wrap: wrap;
-    /* text-wrap: nowrap; */
-  
-}
-
-.aboutpara{
-    /* min-width:100%; */
-    /* height:40%; */
-    width:100%;
- margin:5px;
- font-weight:400;
- font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size:14px;
-    line-height: 21px;
-    display: flex;
-    text-transform: capitalize;
-    flex-wrap: nowrap;
-    background-color: #18293c;
-}
-
-
-
-.profile_image_about{
-   flex-wrap: wrap;
-    width:100%;
-    border-radius: 10px;
-    height:100%;
-    vertical-align: center;
-}
-
-.skill{
-    min-width:100%;
-    margin:10px;
-    font-weight: 500;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.skills_data{
-    min-width:100%;
-
-    display: flex;
-    flex-wrap: wrap;
-    /* padding: 15px; */
-    -webkit-tap-highlight-color: transparent;
-}
-
-.skl{
-    /* display: inline-block; */
-    /* height:100%; */
-    margin: 5px;
-    padding: 10px;
-    background-color: var(--white-alpha-25);
-    border-radius: 30px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 12px;
-    /* width:100%; */
-}
-.skl:hover{
-    cursor: pointer;
-    background-color: var(--white-alpha-40);
-}
-
-.about_bottom{
-    min-width:100%;
-
-    display: flex;
-    /* margin:5px; */
-}
-
-.education , .experience{
-    padding: 5px;
-    /* font-size: 20px; */    
-    font-size: 1.5em;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 500;
-}
-
-.experience{
-    margin-left: 20px;
-}
-  /* --------------about page style ends -------- */
-
+/* ---------------Responsive style ends-------------- */
