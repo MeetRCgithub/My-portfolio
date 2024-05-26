@@ -324,7 +324,12 @@
 .contactme:hover::before{
     height: 100%;
 }
-
+body::-webkit-scrollbar{
+    width:0px;
+}
+.eduleft-line::-webkit-scrollbar{
+    width:0px;
+}
 /* -----------------about page style finish-------------- */
 
 /* ---------responsive starts----------- */
