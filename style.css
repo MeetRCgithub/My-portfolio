@@ -105,7 +105,7 @@
     opacity:0.3;
     top:50%;
     left:23%;
-    animation: left-right 3s ease-in-out 0.4s infinite alternate ;
+    animation: wave 3s ease-in-out 0.4s infinite alternate ;
 
 }
 .one{
@@ -133,7 +133,6 @@
     top:45%;
     left:60%;
     animation: bounce 4s ease-in-out 0.2s infinite alternate;
-
 }
 
 /* --------animate the circles---------- */
@@ -144,6 +143,23 @@
     100%{
         transform:translateY(100px);
 
+    }
+}
+@keyframes wave {
+    0%{
+        transform: translate(0,0) scale(0.4) rotate(0deg);
+        opacity: 0;
+    }
+    20%{
+        transform: translate(25px,40px) scale(0.6) rotate(90deg);
+        opacity: 0.1;
+    }
+    60%{
+        transform: translate(50px,-40px) scale(0.8) rotate(180deg);
+    }
+    100%{
+        opacity: 0.2;
+        transform: translate(100px,40px) scale(1.0) rotate(360deg);
     }
 }
 @keyframes left-right {
