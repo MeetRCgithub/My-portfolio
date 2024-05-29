@@ -1,5 +1,6 @@
 // let btn = document.querySelectorAll(".viewbtn");
-document.addEventListener('click',(e)=>{
+var p = document.querySelector("#portcontainer");
+p.addEventListener('click',(e)=>{
    document.querySelector(".project-details").classList.toggle('disp-popup');
    document.body.classList.toggle("stopscrolling");
    document.querySelector(".all").classList.toggle('popupcome');

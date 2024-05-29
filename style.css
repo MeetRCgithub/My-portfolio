@@ -286,9 +286,9 @@
     /* transition:all 1s ease; */
 }
 
-.home_img:hover{
+/* .home_img:hover{
     animation: picanimation 1s ease;
-}
+} */
 
 @keyframes picanimation {
     0% {

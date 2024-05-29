@@ -286,7 +286,7 @@ viewmore card starts
 .web-url{
     text-decoration: none;
 }
-
+ 
 /* ---------responsive design starts--------- */
 @media screen and (max-width:575px) {
     .projectcard,.pro-det-innr{
